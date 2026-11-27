@@ -561,25 +561,6 @@ namespace dxvk {
       { "d3d9.maxFrameRate",                     "60" },
       { "d3d9.presentInterval",                  "1" },
     }} },
-    /* Halo CE/HaloPC                             */
-    { R"(\\halo(ce)?\.exe$)", {{
-      // Game enables minor decal layering fixes
-      // specifically when it detects AMD.
-      // Avoids chip being detected as unsupported
-      // when on intel. Avoids possible path towards
-      // invalid texture addressing methods.
-      { "d3d9.customVendorId",              "1002" },
-      // Avoids card not recognized error.
-      // Keeps game's rendering methods consistent
-      // for optimal compatibility.
-      { "d3d9.customDeviceId",              "4172" },
-      // The game uses incorrect sampler types in
-      // the shaders for glass rendering which
-      // breaks it on native + us if we don't
-      // spec-constantly chose the sampler type
-      // automagically.
-      { "d3d9.forceSamplerTypeSpecConstants", "True" },
-    }} },
     /* Counter Strike: Global Offensive
        Needs NVAPI to avoid a forced AO + Smoke
        exploit so we must hide Nvidia GPUs.       */
