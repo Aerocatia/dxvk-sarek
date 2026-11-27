@@ -1,7 +1,13 @@
-> [!NOTE]
-> Bug reports and pull requests are welcome, but please understand that I'm currently on my exam period for this year of my career, and I've also joined an indie dev group to create a retro style racing game, this on top of my usual work. This means that my current FOSS projects are at a halt even if they are my hobby, and I expect to retake them in 1-3 months. The projects are not abandoned, development will resume once things calm down.
->
-> Also English isn't my first language. I mainly speak Spanish (and some Portuguese), so I usually write the docs in Spanish, run them through a translator, and then edit the result. Some parts may sound a bit stiff or unnatural because of that. If anything is unclear, feel free to open an issue and I'll fix it.
+# d3d9-bc7
+
+This is a mod of DXVK-Sarek that exposes the BC7 texture format through d3d9.
+
+This allows the use of BC7 format textures in game mods without having to change the renderer to use a newer graphics API that provides native support.
+
+
+The format is exposed with the custom FourCC `'BC7 '` (0x20374342) and can be tested for with `IDirect3D9::CheckDeviceFormat`.
+
+The original readme is as follows:
 
 # DXVK-Sarek
 
